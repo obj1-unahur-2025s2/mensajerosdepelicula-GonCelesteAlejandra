@@ -1,0 +1,14 @@
+import mensajeros.*
+
+describe "tests de Mensajeros" {
+
+  test "Que Roberto con un camion puede llevar un paquete que esta pago a Puente Brooklyn"{
+    paquete.pagarPaquete()
+    roberto.cambiarVehiculo(camion)
+    assert.that(paquete.sePuedeEntregar(roberto, puenteBrooklyn))
+  }
+
+  test "Que Neo con credito no puede llevar un paquete que no esta pago a la Matrix"{
+    assert.notThat(paquete.sePuedeEntregar(neo, laMatrix))
+  }
+}
